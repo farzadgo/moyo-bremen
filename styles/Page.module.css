@@ -1,0 +1,42 @@
+.pageMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0 var(--padding) 90px;
+}
+
+.pageBody {
+  max-width: 900px;
+  margin-top: 115px;
+}
+
+.pageBody section {
+  margin-bottom: 60px;
+}
+.imprintSection {
+  font-size: 0.8em !important;
+}
+
+.pageBody section h1 {
+  font-size: var(--header-size-lg);
+  margin-bottom: 30px;
+}
+
+.pageBody section p {
+  margin: 1em 0;
+  font-size: var(--parag-size-lg);
+  line-height: 1.4em;
+}
+
+.pageBody section a {
+  color: var(--moyo-c1);
+}
+
+.photoContainer {
+  margin-bottom: 50px;
+}
+.photoContainer img {
+  max-width: 100%;
+  height: auto;
+}

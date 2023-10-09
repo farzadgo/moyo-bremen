@@ -1,0 +1,81 @@
+.container {
+  position: fixed;
+  width: 400px;
+  top: 0;
+  right: 0;
+  height: 100%;
+  overflow: hidden;
+  z-index: 10;
+  background-color: #d0bfadab;
+  backdrop-filter: blur(5px);
+}
+
+
+.contactSection {
+  display: flex;
+  align-items: center;
+  font-size: 0.8em;
+  flex-direction: column;
+  width: 100%;
+  position: absolute;
+  bottom: var(--padding);
+}
+.contact {
+  display: flex;
+  height: 36px;
+  align-items: center;
+}
+.contact a {
+  margin-left: 10px;
+  font-size: 1.3em;
+}
+
+.close {
+  position: absolute;
+  right: var(--padding);
+  top: var(--padding);
+}
+.closebtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  cursor: pointer;
+  height: 48px;
+  width: 48px;
+}
+.closebtn svg {
+  pointer-events: none;
+}
+
+
+.nav {
+  display: flex;
+  align-items: center;
+  min-height: 100%;
+}
+.nav ul {
+  width: 100%;
+}
+.nav li {
+  display: flex;
+  align-items: center;
+  height: 70px;
+  font-size: 2em;
+  user-select: none;
+  -webkit-user-select: none;
+  justify-content: center;
+  font-size: var(--header-size-sm);
+}
+
+
+@media (max-width: 699px) {
+  .container {
+    width: 100%;
+  }
+  .closebtn {
+    width: 36px;
+    height: 36px;
+  }
+}

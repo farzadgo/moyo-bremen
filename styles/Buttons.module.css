@@ -1,0 +1,47 @@
+.buttonContainer {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  right: var(--padding);
+  top: var(--padding);
+  align-items: flex-end;
+}
+
+.buttonContainer > * {
+  border: none;
+  cursor: pointer;
+  margin-bottom: var(--padding);
+}
+
+.menubut,
+.themebut {
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  z-index: 5;
+}
+
+.langbut {
+  font-family: var(--font-serif);
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  font-size: 1.2em;
+  height: 48px;
+  text-align: right;
+}
+
+
+@media (max-width: 699px) {
+  .menubut,
+  .themebut {
+    height: 28px;
+    width: 28px;
+  }
+  .langbut {
+    height: 36px;
+  }
+}
