@@ -1,20 +1,24 @@
 export const program = [
   {
-    date: 'Tuesday 05.09',
-    body: [
+    DATE: '05.09',
+    BODY: [
       {
         lang: 'de',
-        title: 'Eröffnung'
+        title: 'Eröffnung',
+        day: 'Di',
+        parags: [``]
       },
       {
         lang: 'en',
-        title: 'Opening'
+        title: 'Opening',
+        day: 'Tu',
+        parags: [``]
       }
     ]
   },
   {
-    date: 'Tuesday 12.09',
-    body: [
+    DATE: '12.09',
+    BODY: [
       {
         lang: 'bg',
         title: 'Български следобед',
@@ -29,6 +33,7 @@ export const program = [
       {
         lang: 'de',
         title: 'Bulgarischer Nachmittag',
+        day: 'Di',
         parags: [
           `Am Dienstag kannst du ab 14 Uhr der Bulgarischen Sprache lauschen. Die Schauspielerin Nevena Kokonova liest ihre Lieblingsgedichte als Audioaufnahme.`,
           `Du kannst einen schnellen Kurs in Bulgarischer Sprache besuchen und dabei lernen, wie man einen poetischen Apfelstrudel mit Georgi Gospodinov backt.`,
@@ -40,6 +45,7 @@ export const program = [
       {
         lang: 'en',
         title: 'Bulgarian afternoon',
+        day: 'Tu',
         parags: [
           `On Tuesday, from 2 pm, you can listen to the Bulgarian language. Actress Nevena Kokonova will read her favorite poems as an audio recording.`,
           `You can take a quick course in Bulgarian language and learn how to bake a poetic apple strudel with Georgi Gospodinov.`,
@@ -51,8 +57,8 @@ export const program = [
     ]
   },
   {
-    date: 'Tuesday 26.09',
-    body: [
+    DATE: '26.09',
+    BODY: [
       {
         lang: 'uk',
         title: 'День української мови',
@@ -65,6 +71,7 @@ export const program = [
       {
         lang: 'de',
         title: 'Tag der ukrainischen Sprache',
+        day: 'Di',
         parags: [
           `Wir laden dich ein, am 26.09.23 im UMZU in der Bremer Innenstadt Ukrainisch zu lernen!`,
           `Von 14:00 bis 20:00 Uhr lernen wir Ukrainisch durch verschiedene Spiele, kreative Workshops, Lieder, Tänze und informelle Kommunikation mit ukrainischen Muttersprachler*innen. Der Eintritt ist frei.`,
@@ -74,6 +81,7 @@ export const program = [
       {
         lang: 'en',
         title: 'Day of Ukrainian language',
+        day: 'Tu',
         parags: [
           `We invite you to learn Ukrainian in the city center of Bremen on 26.09.23 at UMZU space!`,
           `From 14:00 till 20:00 we will learn Ukrainian via different games, creative workshops, songs, dancing and informal communication with Ukrainian native speakers of Bremen. Entrance is free.`,
@@ -83,11 +91,12 @@ export const program = [
     ]
   },
   {
-    date: 'Friday 06.10',
-    body: [
+    DATE: '06.10',
+    BODY: [
       {
         lang: 'de',
         title: 'Eine multilinguale Lesung auf Wolof, Luganda, Swahili, Deutsch, Englisch und Französisch - Eine Veranstaltung des Afrika-Netzwerkes-Bremen',
+        day: 'Fr',
         parags: [
           `Im Rahmen der Veranstaltungsreihe <b><i>Tell your Story</i></b> lesen engagierte Personen ihre Texte in Bezug auf die Klimagerechtigkeit in verschiedenen Sprachen (Wolof, Luganda, Swahili, Deutsch, Englisch und Französisch) vor. Dabei haben wir einen Ehrengast: Hamira Kobusyngye, Aktivistin für Klimagerechtigkeit und Trägerin des 18. Bremer Solidaritätspreises, aus Uganda. `
         ]
@@ -95,6 +104,7 @@ export const program = [
       {
         lang: 'en',
         title: 'A multilingual reading in Wolof, Luganda, Swahili, German, English and French - An event by Africa-Network-Bremen',
+        day: 'Fr',
         parags: [
           `As part of the event series <b>Tell your Story</b> committed people read their texts related to climate justice in different languages (Wolof, Luganda, Swahili, German, English and French). We have a special guest: Hamira Kobusyngye, activist for climate justice and winner of the 18th Bremen Solidarity Award, from Uganda.`
         ]
@@ -102,11 +112,12 @@ export const program = [
     ]
   },
   {
-    date: 'Tuesday 10.10',
-    body: [
+    DATE: '10.10',
+    BODY: [
       {
         lang: 'de',
         title: 'Basteln, Lesen, Spielen - die Schwarze Kinderbibliothek im UMZU',
+        day: 'Di',
         parags: [
           `Im Rahmen des "moyo" Projektes bietet die Schwarze Kinderbibliothek am Dienstag, 10.10.2023 von 15 - 18 Uhr ein kleines Lese- und Bastelprogramm im UMZU an. Es wird die Möglichkeit geben, in mitgebrachten und ausgewählten, verschiedenen Büchern aus der Schwarzen Kinderbibliothek zu stöbern/zu lesen und "Bücherfresser" zu basteln, die als Lesezeichen dienen.`
         ]
@@ -114,6 +125,7 @@ export const program = [
       {
         lang: 'en',
         title: 'Crafting, Reading, Playing - The Black Children’s Library at UMZU',
+        day: 'Tu',
         parags: [
           `As part of the "moyo" project, the Black Children's Library is offering a small reading and craft programme at the UMZU on Tuesday, 10.10.2023 from 3 till 6 pm. You will have the opportunity to browse through various books from the Black Children's Library and to make "book eaters" to serve as bookmarks.`
         ]
@@ -121,30 +133,12 @@ export const program = [
     ]
   },
   {
-    date: 'Friday 13.10',
-    body: [
-      {
-        lang: 'de',
-        title: 'Afrika-Netzwerk-Bremen',
-        parags: [
-          ``
-        ]
-      },
-      {
-        lang: 'en',
-        title: 'Africa-Network-Bremen',
-        parags: [
-          ``
-        ]
-      }
-    ]
-  },
-  {
-    date: 'Tuesday 17.10',
-    body: [
+    DATE: '17.10',
+    BODY: [
       {
         lang: 'de',
         title: 'Kinderferienprogramm',
+        day: 'Di',
         parags: [
           `Liebe Kinder, kommt zwischen 13 Uhr und 18 Uhr zu uns ins UMZU zum Spielen, Toben, Tanzen, Basteln und was euch sonst noch so einfällt. Eure Eltern können derweil eine Tasse Tee trinken und sich bei uns entspannen. Wir freuen uns auf viele Bremer Sprachen und einen fröhlichen Nachmittag mit Gästen allen Alters.`
         ]
@@ -152,6 +146,7 @@ export const program = [
       {
         lang: 'en',
         title: 'Children’s holiday program',
+        day: 'Tu',
         parags: [
           `Dear children, come and join us at the UMZU between 1pm and 6pm to play, romp, dance, do crafts and whatever else you can think of. Meanwhile, your parents can enjoy a cup of tea and relax with us. We are looking forward to many languages from Bremen and a happy afternoon with guests of all ages.`
         ]
@@ -159,8 +154,8 @@ export const program = [
     ]
   },
   {
-    date: 'Tuesday 07.11',
-    body: [
+    DATE: '07.11',
+    BODY: [
       {
         lang: 'ku',
         title: 'Çîrokên bûyer û ramanên di ola Êzidîtiyê de hene nasbikin',
@@ -176,6 +171,7 @@ export const program = [
       {
         lang: 'de',
         title: 'Geschichten aus dem Ezidentum kennenlernen',
+        day: 'Di',
         parags: [
           `Kommt und entdeckt Geschichten aus dem Ezidentum, der ältesten Religion im Nahen Osten.`,
           `14.00 - 16.00: Der ezidische Schriftsteller Kemal Tolan liest aus seinem Buch die Geschichte "Augenblicke und Juwelier" - eine Geschichte, die einen Einblick in die ezidische Mythologie bietet. Es erfolgt auch eine Übersetzung auf Deutsch.`,
@@ -188,6 +184,7 @@ export const program = [
       {
         lang: 'en',
         title: 'Getting to know stories from Yezidism',
+        day: 'Tu',
         parags: [
           `Come and discover stories from Yezidism, the oldest religion in the Middle East.`,
           `14.00 - 16.00: The Yezidi writer Kemal Tolan reads from his book "Moments and Jeweller" - a story that offers an insight into Yezidi mythology. There will also be a translation into German.`,
@@ -200,27 +197,8 @@ export const program = [
     ]
   },
   {
-    date: 'Friday 10.11',
-    body: [
-      {
-        lang: 'de',
-        title: 'Afrika-Netzwerk-Bremen',
-        parags: [
-          ``
-        ]
-      },
-      {
-        lang: 'en',
-        title: 'Africa-Network-Bremen',
-        parags: [
-          ``
-        ]
-      }
-    ]
-  },
-  {
-    date: 'Tuesday 14.11',
-    body: [
+    DATE: '14.11',
+    BODY: [
       {
         lang: 'ro',
         title: 'O după-amiază împreună în română',
@@ -236,6 +214,7 @@ export const program = [
       {
         lang: 'de',
         title: 'Ein Nachmittag zusammen auf Rumänisch',
+        day: 'Di',
         parags: [
           `Bunǎ! Kochen deine rumänischsprachigen Freund*innen "mămăligă" und du möchtest ihnen auf Rumänisch sagen, wie köstlich es ist?`,
           `Oder hast du dich schon einmal gefragt, was der Euro-Pop-Hit "Dragostea Din Tei" aus den frühen 2000er Jahren eigentlich bedeutet, und willst du deine Freund*innen auf einer Karaoke-Party überraschen, indem du den Text perfekt kennst?`,
@@ -248,6 +227,7 @@ export const program = [
       {
         lang: 'en',
         title: 'An afternoon together in Romanian',
+        day: 'Tu',
         parags: [
           `Bunǎ! Are your Romanian-speaking friends cooking some “mămăligă” and you’d like to tell them how delicious it is in Romanian?`,
           `Or did you ever wonder what the early 2000s euro-pop hit “Dragostea Din Tei” actually means and you want to surprise your friends at a karaoke party by perfectly knowing the lyrics?`,
@@ -260,11 +240,12 @@ export const program = [
     ]
   },
   {
-    date: 'Friday 17.11',
-    body: [
+    DATE: '17.11',
+    BODY: [
       {
         lang: 'de',
         title: 'Bilinguale Lesung auf Luganda und Deutsch - Eine Veranstaltung des Afrika-Netzwerkes-Bremen',
+        day: 'Fr',
         parags: [
           `Im Rahmen der Veranstaltungsreihe <b><i>Tell your Story</i></b> findet eine bilinguale Lesung des Buches  “Freunde überall - Eine Autovermietung in Kampala, Uganda” auf Luganda und Deutsch statt.`
         ]
@@ -272,6 +253,7 @@ export const program = [
       {
         lang: 'en',
         title: 'BIlingual reading in Luganda and German - An Event by Africa-Network-Bremen',
+        day: 'Fr',
         parags: [
           `As part of the event series <b>Tell your Story</b> there will be a bilingual reading of the book "Friends Everywhere - A Car Hire Company in Kampala, Uganda" (in Luganda and German).`
         ]
@@ -279,8 +261,8 @@ export const program = [
     ]
   },
   {
-    date: 'Tuesday 21.11',
-    body: [
+    DATE: '21.11',
+    BODY: [
       {
         lang: 'ko',
         title: '브레멘 한국문화원',
@@ -296,6 +278,7 @@ export const program = [
       {
         lang: 'de',
         title: 'Koreanisches Kulturzentrum Bremen',
+        day: 'Di',
         parags: [
           `Koreanisch -Sprachkurs
           Kinderbibliothek
@@ -308,6 +291,7 @@ export const program = [
       {
         lang: 'en',
         title: 'Korean Cultural Centre Bremen',
+        day: 'Tu',
         parags: [
           `Korean -language course
           Children's library
@@ -320,30 +304,12 @@ export const program = [
     ]
   },
   {
-    date: 'Friday 24.11',
-    body: [
-      {
-        lang: 'de',
-        title: 'Afrika-Netzwerk-Bremen',
-        parags: [
-          ``
-        ]
-      },
-      {
-        lang: 'en',
-        title: 'Africa-Network-Bremen',
-        parags: [
-          ``
-        ]
-      }
-    ]
-  },
-  {
-    date: 'Saturday 25.11',
-    body: [
+    DATE: '25.11',
+    BODY: [
       {
         lang: 'de',
         title: 'Guineischer Tag. Das Motto: Heute wird nur Fullah gesprochen.',
+        day: 'Sa',
         parags: [
           `Der Guineische Verein für Integration und Bildung in Deutschland möchte am 25.11. den Tag mit Euch verbringen. Es werden kreativen Angeboten auf Fullah geben.`,
           `Für alle Altersstufen ist etwas dabei.`
@@ -352,6 +318,7 @@ export const program = [
       {
         lang: 'en',
         title: 'Guinean Day. The motto: Only Fullah is spoken today.',
+        day: 'Sa',
         parags: [
           `The Guinean Association for Integration and Education in Germany would like to spend the day with you on the 25th of November. There will be creative activities in Fullah.`,
           `There will be activities suited for all ages.`
@@ -360,27 +327,8 @@ export const program = [
     ]
   },
   {
-    date: 'Friday 01.12',
-    body: [
-      {
-        lang: 'de',
-        title: 'Afrika-Netzwerk-Bremen',
-        parags: [
-          ``
-        ]
-      },
-      {
-        lang: 'en',
-        title: 'Africa-Network-Bremen',
-        parags: [
-          ``
-        ]
-      }
-    ]
-  },
-  {
-    date: 'Tuesday 05.12',
-    body: [
+    DATE: '05.12',
+    BODY: [
       {
         lang: 'et',
         title: 'Pakkumised eesti keeles',
@@ -393,6 +341,7 @@ export const program = [
       {
         lang: 'de',
         title: 'Angebote auf estnischer Sprache',
+        day: 'Di',
         parags: [
           `1. Naturprodukte bemalen (bspw. Steine vom Strand in Estland)`,
           `2. Mini Sprachkurs teilweise am Beispiel von Musik`,
@@ -402,6 +351,7 @@ export const program = [
       {
         lang: 'en',
         title: 'Offers in Estonian',
+        day: 'Tu',
         parags: [
           `1. painting natural products (e.g. stones from the beach in Estonia)`,
           `2. mini language course partly using music as an example`,
@@ -411,40 +361,19 @@ export const program = [
     ]
   },
   {
-    date: 'Friday 08.12',
-    body: [
+    DATE: '19.12',
+    BODY: [
       {
         lang: 'de',
-        title: 'Afrika-Netzwerk-Bremen',
-        parags: [
-          ``
-        ]
-      },
-      {
-        lang: 'en',
-        title: 'Africa-Network-Bremen',
-        parags: [
-          ``
-        ]
-      }
-    ]
-  },
-  {
-    date: 'Tuesday 19.12',
-    body: [
-      {
-        lang: 'de',
-        title: 'Abschluss',
-        parags: [
-          ``
-        ]
+        title: 'Abschluss-Event',
+        day: 'Di',
+        parags: [``]
       },
       {
         lang: 'en',
         title: 'Closing',
-        parags: [
-          ``
-        ]
+        day: 'Tu',
+        parags: [``]
       }
     ]
   },

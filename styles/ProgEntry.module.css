@@ -1,37 +1,39 @@
 .programentry {
-  /* margin-bottom: 80px; */
   width: 100%;
 }
 
 .time {
   display: inline-flex;
-  padding: 10px 15px;
-  margin-bottom: 25px;
+  justify-content: space-between;
   cursor: pointer;
   opacity: 1;
+  font-size: var(--header-size-sm);
+  width: 100%;
+  padding: 20px 0 10px;
 }
-.time p {
-  pointer-events: none;
-  display: flex;
-  align-items: center;
-}
-.time svg {
-  margin-left: 10px;
+.time img {
+  height: 36px;
 }
 
-.description,
+.programentry > h2 {
+  padding-bottom: 20px;
+  color: var(--moyo-c2);
+  font-size: 1.2em;
+}
+
+.description {
+  overflow: hidden;
+  margin-bottom: 10px;
+}
 .description > div {
   margin-bottom: 30px;
 }
-
 .description h2 {
-  padding-left: 15px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
-
 .description p {
   margin-bottom: 0.5em;
-  padding-left: 73px;
+  padding-left: 70px;
 }
 
 
@@ -39,5 +41,8 @@
 @media (max-width: 699px) {
   .description p {
     padding-left: 15px;
+  }
+  .time img {
+    height: 28px;
   }
 }

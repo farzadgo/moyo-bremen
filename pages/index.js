@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import Head from 'next/head';
+// import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { program } from '../data/program-data';
 import { langs, themes, useLang, useTheme } from '@/components/Layout';
@@ -26,7 +26,7 @@ export default function Home() {
     // router.push(`/#${id}`);
     setTimeout(() => {
       router.push(`/#${id}`);
-    }, "50");
+    }, "100");
   }
   
   const [bgURL, setBgURL] = useState('/moyo-claim.png');

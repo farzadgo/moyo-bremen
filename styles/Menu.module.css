@@ -6,8 +6,7 @@
   height: 100%;
   overflow: hidden;
   z-index: 10;
-  background-color: #d0bfadab;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(7px);
 }
 
 
@@ -73,9 +72,5 @@
 @media (max-width: 699px) {
   .container {
     width: 100%;
-  }
-  .closebtn {
-    width: 36px;
-    height: 36px;
   }
 }

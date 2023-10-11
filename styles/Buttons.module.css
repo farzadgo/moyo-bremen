@@ -1,20 +1,15 @@
 .buttonContainer {
   position: fixed;
   display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse;
   right: var(--padding);
   top: var(--padding);
-  align-items: flex-end;
-}
-
-.buttonContainer > * {
-  border: none;
-  cursor: pointer;
-  margin-bottom: var(--padding);
+  z-index: 2;
 }
 
 .menubut,
-.themebut {
+.themebut,
+.langbut {
   background: none;
   display: flex;
   justify-content: center;
@@ -22,26 +17,59 @@
   width: 48px;
   height: 48px;
   z-index: 5;
+  border: none;
+  cursor: pointer;
+  margin-left: var(--padding);
+  font-size: 1.6em;
 }
 
+.menubut {
+  background: var(--moyo-c1);
+}
 .langbut {
-  font-family: var(--font-serif);
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  font-size: 1.2em;
-  height: 48px;
-  text-align: right;
+  background: var(--moyo-c2);
+}
+.themebut {
+  background: var(--moyo-c3);
+}
+
+.optionsList {
+  display: none;
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  width: calc(100% - 30px);
+  list-style: none;
+  background: #f6be83e6;
+  /* z-index: 1; */
+  display: flex;
+  text-align: center;
+  backdrop-filter: blur(5px);
+}
+
+.optionsList li {
+  padding: 5px;
+  cursor: pointer;
+}
+.optionsList li:hover {
+  background-color: #7f7f7f7f;
+}
+.optionsList li.selected::before {
+  content: '⏵';
+  margin-right: 4px;
+}
+.optionsList li.selected::after {
+  content: '⏴';
+  margin-left: 4px;
 }
 
 
 @media (max-width: 699px) {
-  .menubut,
-  .themebut {
-    height: 28px;
-    width: 28px;
+  .langbut img {
+    width: 32px;
+    height: 32px;
   }
-  .langbut {
-    height: 36px;
+  .optionsList {
+    width: calc(100% - 20px);
   }
 }

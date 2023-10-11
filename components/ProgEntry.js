@@ -1,50 +1,60 @@
-import { useState, useEffect } from 'react';
-import * as Icon from 'react-feather';
+import { useState, useEffect, useRef } from 'react';
+// import * as Icon from 'react-feather';
 import styles from '@/styles/ProgEntry.module.css';
 
 const ProgEntry = ({ content, lang, fgColor, activeParag, setActive }) => {
 
+  const descRef = useRef(0);
   const [body, setBody] = useState('');
 
   const [bodyHeight, setBodyHeight] = useState(0);
 
-  const [funPadding, setFunPadding] = useState('0');
+  const [activeMargin, setActiveMargin] = useState('0');
   const [arrowAngle, setArrowAngle] = useState(0);
+  const [day, setDay] = useState('');
 
   const handleTimeClick = (e) => {
     // let targetID = e.target.parentNode.id;
     // setActiveParag(targetID);
     // router.push(`/#${targetID}`);
     // setActive(content.ID);
-    setActive(content.date);
+    setActive(content.DATE);
   }
 
   const createMarkup = (string) => {
     return {__html: string}
   }
 
-  const iconProps = {
-    color: fgColor,
-    size: 36,
-    strokeWidth: 1
-  }
+  // const iconProps = {
+  //   color: fgColor,
+  //   size: 36,
+  //   strokeWidth: 1.5
+  // }
   
   useEffect(() => {
     // console.log(content);
-    let imperial = content.body.filter(obj => obj.lang === lang);
-    let extra = content.body.filter(obj => obj.lang !== 'de' && obj.lang !== 'en');
+    let imperial = content.BODY.filter(obj => obj.lang === lang);
+    setDay(imperial[0].day);
+    let extra = content.BODY.filter(obj => obj.lang !== 'de' && obj.lang !== 'en');
     setBody([...extra, ...imperial]);
 
     // console.log(activeParag);
+    // console.log(body);
 
-    if (content.date === activeParag) {
+    if (content.DATE === activeParag) {
       setBodyHeight('auto');
-      setFunPadding('30px');
-      setArrowAngle(90);
+      setActiveMargin('calc(var(--padding) + 48px)');
+      setArrowAngle(180);
+
+      let tempTitle = descRef.current.previousSibling;
+      if (tempTitle.id === 'temp-title') tempTitle.style.display = 'none';
     } else {
       setBodyHeight(0);
-      setFunPadding('0');
+      setActiveMargin('0');
       setArrowAngle(0);
+      
+      let tempTitle = descRef.current.previousSibling;
+      if (tempTitle.id === 'temp-title') tempTitle.style.display = 'block';
     }
 
     return () => {}
@@ -53,13 +63,17 @@ const ProgEntry = ({ content, lang, fgColor, activeParag, setActive }) => {
 
  
   return (
-   <div id={content.date} className={styles.programentry} style={{paddingTop: funPadding}}>
+   <div id={content.DATE} className={styles.programentry} >
     
-    <div className={styles.time} style={{border: `2px solid ${fgColor}`}} onClick={handleTimeClick}>
-      <p> {content.date} <Icon.ChevronRight {...iconProps} style={{transform: `rotate(${arrowAngle}deg)`}}/> </p>
+    <div className={styles.time} onClick={handleTimeClick} style={{marginTop: activeMargin, borderTop: `1px solid ${fgColor}`}}>
+      {/* <p> {day} – {content.DATE} <Icon.ArrowDown {...iconProps} style={{transform: `rotate(${arrowAngle}deg)`}}/> </p> */}
+      <span> {day} – {content.DATE} </span>
+      <img src='/moyo-logo-72.png' style={{transform: `rotate(${arrowAngle}deg)`}} />
     </div>
 
-    <div className={styles.description} style={{height: bodyHeight, overflow: 'hidden'}}>
+    {body.length > 1 && <h2 id='temp-title'> {body[0].title} </h2>}
+
+    <div className={styles.description} style={{height: bodyHeight}} ref={descRef}>
       {body && body.map((e, i) => (
         <div key={i} style={e.lang !== 'en' && e.lang !== 'de' ? {color: 'var(--moyo-c1'} : {}}>
           <h2> {e.title} </h2>

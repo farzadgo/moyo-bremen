@@ -15,7 +15,7 @@ const About = () => {
   
   const [about, setAbout] = useState('');
   const [title, setTitle] = useState('');
-  const [thanksPhrase, setThanksPhrase] = useState('');
+  // const [thanksPhrase, setThanksPhrase] = useState('');
 
   const fgColor = theme === themes.light ? 'black' : 'white';
   const bgColor = theme === themes.light ? 'var(--bg-light)' : 'var(--bg-dark)';
@@ -36,10 +36,10 @@ const About = () => {
 
   const [animKey, setAnimKey] = useState(0);
 
-  const multilangThanksPhrases = {
-    en: 'Special thanks to our cooperation partners:',
-    de: 'Besonderer Dank an unsere Kooperationspartner*innen:'
-  }
+  // const multilangThanksPhrases = {
+  //   en: 'Special thanks to our cooperation partners:',
+  //   de: 'Besonderer Dank an unsere Kooperationspartner*innen:'
+  // }
 
   const createMarkup = (string) => {
     return {__html: string}
@@ -62,11 +62,11 @@ const About = () => {
       setDirection('ltr')
     }
 
-    if (lang === langs.en) {
-      setThanksPhrase(multilangThanksPhrases.en)
-    } else {
-      setThanksPhrase(multilangThanksPhrases.de)
-    }
+    // if (lang === langs.en) {
+    //   setThanksPhrase(multilangThanksPhrases.en)
+    // } else {
+    //   setThanksPhrase(multilangThanksPhrases.de)
+    // }
 
     setAnimKey(animKey + 1);
 
@@ -102,10 +102,6 @@ const About = () => {
           {about && about.map((e, i) => <p key={i} dangerouslySetInnerHTML={createMarkup(e)}/>)}
         </section>
 
-        <section>
-          <h4> {thanksPhrase} </h4>
-          <div className='gallery'></div>
-        </section>
       </motion.div>
 
     </main>

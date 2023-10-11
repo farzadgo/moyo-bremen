@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { contact, links } from '../data/sitedata';
+import { contact } from '../data/sitedata';
 import { motion } from 'framer-motion';
 
 import { themes, useTheme, langs, useLang } from '@/components/Layout';
@@ -18,16 +18,16 @@ const Menu = ({ setToggle }) => {
   const {lang} = useLang();
 
   const fgColor = theme === themes.light ? 'black' : 'white';
-  // const bgColor = theme === themes.light ? 'var(--bg-light)' : 'var(--bg-dark)';
+  const bgColor = theme === themes.light ? '#e1d2cb81' : '#261f1baa';
 
   const multilangEntries = {
     en: {
-      home:'moyo',
+      home:'Program',
       about: 'About us',
       impressions: 'Impressions'
     },
     de: {
-      home:'moyo',
+      home:'Programm',
       about: 'Über uns',
       impressions: 'Eindrücke'
     }
@@ -64,8 +64,10 @@ const Menu = ({ setToggle }) => {
     handleEntries();
 
     document.body.classList.add('disable-scroll');
+    document.body.style.overflowY = 'hidden';
     return () => {
       document.body.classList.remove('disable-scroll');
+      document.body.style.overflowY = 'scroll';
     }
   }, [lang]);
   
@@ -73,12 +75,12 @@ const Menu = ({ setToggle }) => {
   return (
     <motion.div
       className={styles.container}
+      style={{backgroundColor: bgColor}}
       // key={animKey}
       initial={{ x: '100%', opacity: 0 }}
       animate={{ x: 0, opacity: 1, transition: { duration: 0.4} }}
       exit={{ x: '100%', opacity: 0, transition: { duration: 0.4} }}
     >
-      {/* <CloseMenu setToggle={setToggle}/> */}
       <div className={styles.close}>
         <button className={styles.closebtn} onClick={setToggle}>
           <Icon.X {...iconProps}/>
