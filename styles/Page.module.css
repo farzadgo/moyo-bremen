@@ -40,3 +40,27 @@
   max-width: 100%;
   height: auto;
 }
+
+
+.row {
+  display: flex;
+  margin-bottom: 20px;
+}
+.logo {
+  max-width: 50%;
+  display: inline-flex;
+}
+.logo img {
+  max-width: 100%;
+  padding-right: 30px;
+}
+
+/* --------- mobile --------- */
+@media (max-width: 699px) {
+  .row {
+    margin-bottom: 10px;
+  }
+  .logo img {
+    padding-right: 10px;
+  }
+}

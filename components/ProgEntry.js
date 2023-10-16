@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from 'react';
-// import * as Icon from 'react-feather';
 import styles from '@/styles/ProgEntry.module.css';
 
 const ProgEntry = ({ content, lang, fgColor, activeParag, setActive }) => {
@@ -19,17 +18,19 @@ const ProgEntry = ({ content, lang, fgColor, activeParag, setActive }) => {
     // router.push(`/#${targetID}`);
     // setActive(content.ID);
     setActive(content.DATE);
+    // let currentParag = e.target.nextSibling;
+    // let currentHeight = currentParag.style.height;
+    // console.log(currentParag);
+    // if (currentHeight === 'auto') {
+    //   currentHeight = '0px';
+    // } else {
+    //   currentHeight = 'auto';
+    // }
   }
 
   const createMarkup = (string) => {
     return {__html: string}
   }
-
-  // const iconProps = {
-  //   color: fgColor,
-  //   size: 36,
-  //   strokeWidth: 1.5
-  // }
   
   useEffect(() => {
     // console.log(content);
@@ -47,7 +48,12 @@ const ProgEntry = ({ content, lang, fgColor, activeParag, setActive }) => {
       setArrowAngle(180);
 
       let tempTitle = descRef.current.previousSibling;
-      if (tempTitle.id === 'temp-title') tempTitle.style.display = 'none';
+      if (tempTitle.id === 'temp-title') {
+        tempTitle.style.display = 'none';
+        // tempTitle.style.height = 0;
+        // tempTitle.style.overflow = 'hidden';
+        // tempTitle.style.padding = 0;
+      };
     } else {
       setBodyHeight(0);
       setActiveMargin('0');
@@ -66,7 +72,6 @@ const ProgEntry = ({ content, lang, fgColor, activeParag, setActive }) => {
    <div id={content.DATE} className={styles.programentry} >
     
     <div className={styles.time} onClick={handleTimeClick} style={{marginTop: activeMargin, borderTop: `1px solid ${fgColor}`}}>
-      {/* <p> {day} – {content.DATE} <Icon.ArrowDown {...iconProps} style={{transform: `rotate(${arrowAngle}deg)`}}/> </p> */}
       <span> {day} – {content.DATE} </span>
       <img src='/moyo-logo-72.png' style={{transform: `rotate(${arrowAngle}deg)`}} />
     </div>

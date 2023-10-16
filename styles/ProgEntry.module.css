@@ -11,6 +11,9 @@
   width: 100%;
   padding: 20px 0 10px;
 }
+.time > * {
+  pointer-events: none;
+}
 .time img {
   height: 36px;
 }
