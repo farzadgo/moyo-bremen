@@ -24,7 +24,7 @@ export const about = [
           `moyo is a place of education and exchange around the many languages that are spoken in Bremen. The events implemented as part of this project (see <a href='./#program'> program</a>) give languages and initiatives the public hearing they deserve. Participation and speaking out - in all languages - is explicitly encouraged in this project. Come by, sit with us, and share your perspective on the city of tomorrow!`,
           `We are usually at UMZU on Tuesday and sometimes on Friday or Saturday. On each opening day, different people - some individual actors, some organized initiatives or associations - are responsible for the program. There are no curators, which means that the decision about the program items lies 100% with the respective responsible persons and thus corresponds to their interests, competences and experiences. A team of volunteers provides logistical support and offers passers-by a sympathetic ear outside of the program.`,
           `Participation in all events of the project is free of charge.`,
-          `<i> In Swahili, one of Bremen's many languages, “moyo” means, among other terms, "heart, feeling, center, center and bravery”. </i>`
+          `<i> In Swahili, one of Bremen's many languages, “moyo” means, among other terms, "heart, feeling, center, and bravery”. </i>`
         ]
       }
     ]
@@ -50,11 +50,11 @@ export const about = [
       {
         TITLE: 'moyo kohta',
         BODY: [
-          `Projekt "MOYO- The Heart of the City" läheb septembrist kuni detsembrini 2023 Bremeni <a href='https://www.umzu-bremen.de/' target='_blank'> UMZU </a>s katsejärku, lootes edasi kasvada ja end kesklinnas kehtestada.`,
-          `MOYO on õppe- ja vahetuspaik, mis on seotud Bremenis kõneldavate keelte mitmekesisusega. Selle projekti raames läbiviidavad üritused (vt <a href='./#program'> programm</a>) annavad keeltele ja algatustele avaliku kuulamise, mida nad väärivad. Selles projektis julgustatakse selgesõnaliselt osalema ja rääkima kõigis keeltes. Tule kohale, istu meiega koos ja jaga oma nägemust homsest linnast!`,
-          `Tavaliselt oleme UMZUs teisipäeval ja mõnikord ka reedel või laupäeval. Igal avamispäeval vastutavad programmi eest erinevad inimesed - mõned üksikud osalejad, mõned organiseeritud algatused või ühendused. Kuraatoreid ei ole, mis tähendab, et otsus programmipunktide üle lasub 100% ulatuses vastavatel vastutavatel isikutel ja vastab seega nende huvidele, pädevustele ja kogemustele. Vabatahtlike meeskond pakub logistilist tuge ja pakub möödujatele ka väljaspool programmi mõistvat kõrva.`,
-          `Osalemine kõigis projekti üritustes on tasuta.`,
-          `<i>MOYO tähendab suahiili keeles, mis on üks paljudest Bremeni keeltest, muu hulgas "süda, tunne, keskus, keskpunkt ja vaprus".</i>`
+          `Projekt „moyo- linna süda“ on üks katseprojekt mis kestab septembrist – detsembrini ja toimub kohas nimega <a href='https://www.umzu-bremen.de/' target='_blank'> UMZU </a> Bremenis. Meie suur soov on, et projekt kasvab peale seda edasi ja rajab endale püsiva koha otse Bremeni kesklinnas.`,
+          `Moyo on üks koht, kus kõik keerleb nende keelte ümber, mida Bremeni elanikud kõnelevad. See on üks koht, kus haridus ja mõtete vahetus on eesmärgiks. Üritused mis projekti raames toimuvad (siehe  <a href='./#program'> Programm</a>) saavutavad just nende keelte jaoks – mida muidu eriti linnas ei ole kuulda või ei ole näha – tunnustust. Kaasa tegemine ja rääkimine – kõikides keeltes – on selles projektis selgesti soovitud. Tule läbi, istu meie juurde ja jaga meiega sinu soovi tuleviku linnaelu kohta.`,
+          `Meie oleme tavaliselt teisipäevati ja vahepeal ka reedel või laupäeval UMZU kohas olemas. Igal projekti päeval kannavad erinevad inimesed – vahest eraisikud, või ka ühingud – vastutust. Selles projektis ei ole kuraatoreid. See tähendab, et päeva korraldajad otsustavad ise, oma huvide ja oskuste järgi, mis üritusel toimuma hakkab. Korraldajaid aitab üks vabatahltik töörühm, samuti on nad olemas kui suvaliselt möödaminejatel tekkib küsimui projekti kohta.`,
+          `Oselemine on tasuta.`,
+          `<i>“moyo” tähendab Suaheli keeles - üks paljudest keeltest, mida Bremenis räägitakse - „Süda, tunne, keskpunkt, tsentrum ja vaprust“.</i>`
         ]
       }
     ]
@@ -204,9 +204,9 @@ export const about = [
     lang: 'ff',
     data: [
       {
-        TITLE: 'Baɗte moyo',
+        TITLE: 'moyo',
         BODY: [
-          `Pullo (keewal mum ko Fulɓe) ko lenyol aynooɓe (durooɓe) hoɗuɓe e diiwaanuuji Sahel takko jeereende Sahara. Hiɓe tawee hannde e leyɗe 15 Afirik Hiirnaange, yoga e majje ko Maali, Senegal, Gine haa leyɗe Afirik Hakkundeeri yeru Chadi, Ndenndaandi Santrafirik e Sudaan. Ko woni sabu ngool saakitagol ko eggudu ndu aynooɓe ɓen ɗaɓɓiranta naʼi maɓɓe ɗin huɗo e njaram.`,
+          `COMING SOON`
         ]
       }
     ]

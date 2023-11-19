@@ -4,6 +4,7 @@ import { langs, useLang, themes, useTheme } from '@/components/Layout';
 import Menu from '@/components/Menu';
 import Buttons from '@/components/Buttons';
 import styles from '@/styles/Page.module.css';
+import * as Icon from 'react-feather';
 
 const About = () => {
 
@@ -35,6 +36,8 @@ const About = () => {
   // }, 1000);
 
   const [animKey, setAnimKey] = useState(0);
+
+  // check this out again, not working with framer-motion!?
   const [isMounted, setIsMounted] = useState(false);
 
   const multilangThanksPhrases = {
@@ -69,7 +72,7 @@ const About = () => {
     }
     fetchData();
 
-    if (lang === langs.ar) {      
+    if (lang === langs.ar || lang === langs.ff) {
       setDirection('rtl')
     } else {
       setDirection('ltr')
@@ -114,6 +117,18 @@ const About = () => {
           </section>
 
           <section>
+            <h2> Location / Standort </h2>
+            <p>
+              UMZU Pavillon, Markt am Hanseatenhof <br/>
+              Papenstraße 6, 28195 Bremen
+            </p>
+            <h3 style={{display: 'flex', height: '1.6em', alignItems: 'center'}}>
+              <Icon.Map /> &nbsp;&nbsp;
+              <a href='https://maps.app.goo.gl/QHXXEwzVygTx1RVx5'> <i>Google Maps</i> </a>
+            </h3>
+          </section>
+
+          <section dir={direction}>
             <h3 style={{margin: '4em 0 2em'}}> {thanksPhrase} </h3>
 
               <div className={styles.row}>

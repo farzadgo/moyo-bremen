@@ -24,12 +24,14 @@ const Menu = ({ setToggle }) => {
     en: {
       home:'Program',
       about: 'About us',
-      impressions: 'Impressions'
+      impressions: 'Impressions',
+      location: 'Location',
     },
     de: {
       home:'Programm',
       about: 'Über uns',
-      impressions: 'Eindrücke'
+      impressions: 'Eindrücke',
+      location: 'Standort',
     }
   }
 
@@ -108,7 +110,7 @@ const Menu = ({ setToggle }) => {
       </nav>
 
       <section className={styles.contactSection}>
-        {contact.map((item, i) => <Contact key={i} item={item} fgColor={fgColor}/>)}
+        {contact.map((item, i) => <Contact key={i} item={item} fgColor={fgColor} entries={entries}/>)}
       </section>
 
     </motion.div>
@@ -118,10 +120,10 @@ const Menu = ({ setToggle }) => {
 export default Menu
 
 
-const Contact = ({ item, fgColor }) => {
+const Contact = ({ item, fgColor, entries }) => {
   const iconProps = {
     color: fgColor,
-    size: 16,
+    size: 20,
     strokeWidth: 2
   }
   const TagName = Icon[item.name];
@@ -135,7 +137,7 @@ const Contact = ({ item, fgColor }) => {
         target="_blank"
         rel="noreferrer"
       >
-        {item.title}
+        {item.title ? item.title : entries.location}
       </a>
     </div>
   )

@@ -5,10 +5,14 @@ module.exports = {
   url: 'https://moyo-bremen.space',
   email: 'info@moyo-bremen.space',
   image: '/og.png',
-  author: 'farzad golghasemi',
+  author: 'moyo Bremen',
   
   // todo: use Feather icon names
   contact: [
+    {
+      name: 'MapPin',
+      url: 'https://maps.app.goo.gl/QHXXEwzVygTx1RVx5',
+    },
     {
       name: 'Mail',
       title: 'info@moyo-bremen.space',

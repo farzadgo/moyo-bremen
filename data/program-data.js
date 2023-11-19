@@ -267,12 +267,15 @@ export const program = [
         lang: 'ko',
         title: '브레멘 한국문화원',
         parags: [
-          `한국어 수업
-          어린이 도서관
-          만남의 장
-          서예수업
-          등등
-          `
+          `한자 도시 브레멘시의 중심 ‘UMZU’에서 '모요팀'과 '브레멘 한국학교'가 함께 '브레멘 한국 문화원'을 새로운 열었습니다.`,
+          `저희 브레멘 한국 문화원에서는 어린이 도서관, 다도, 한국어 수업, 책갈피만들기 등 다채로운 프로그램이 마련되어 있으며, 브레멘 시의 한국문화와 역할에 관한 토론과 간담회도 예정되어 있습니다.`,
+          `모두와 함께 나누고 싶은 한국 문화의 순간에 여러분을 초대합니다.`,
+          `<br>`,
+          `<b>프로그램</b>`,
+          `-12시 - 14시: 어린이 도서 전시 및 다도 시연`,
+          `-14시 - 16시: 책갈피 만들기`,
+          `-16시 - 18시: 한국어 수업`,
+          `-18시 - 20시: 간담회 및 토론`
         ]
       },
       {
@@ -280,12 +283,16 @@ export const program = [
         title: 'Koreanisches Kulturzentrum Bremen',
         day: 'Di',
         parags: [
-          `Koreanisch -Sprachkurs
-          Kinderbibliothek
-          Treffpunkt
-          Kalligraphie 
-          etc…
-          `
+          `Im UMZU in der Mitte der Hansestadt Bremen haben das 'moyo-Team' und die 'Koreanische Schule Bremen e.V.' gemeinsam das 'Koreanische Kulturzentrum' eröffnet.`,
+          `In unserem 'Koreanischen Kulturzentrum' bieten wir ein vielfältiges Programm an, darunter eine Kinderbibliothek, ‚DADO‘ [koreanische Teezeremonie], Bastelaktivitäten [Namensetiketten], Möglichkeiten Korea kennenzulernen und einen Schnupperunterricht in Koreanisch.`,
+          `Zudem sind Diskussionen und Treffen zu Bremens koreanischer Kultur und ihrer Bedeutung geplant.`,
+          `Wir laden alle herzlich ein, diese besonderen Momente der koreanischen Kultur mit uns zu teilen.`,
+          `<br>`,
+          `<b>Programme</b>`,
+          `12:00 - 14:00: ‘Bibliothek’ [Kinderbuchausstellung]und ‘Dado’ [koreanische Teezeremonie]`,
+          `14:00 - 16:00: Bastelaktivitäten [Namensetiketten]`,
+          `16:00 - 18:00: Schnupperunterricht in Koreanisch`,
+          `18:00 - 20:00: Konferenz und Diskussion`
         ]
       },
       {
@@ -293,12 +300,16 @@ export const program = [
         title: 'Korean Cultural Centre Bremen',
         day: 'Tu',
         parags: [
-          `Korean -language course
-          Children's library
-          Meeting place
-          Calligraphy 
-          etc…
-          `
+          `In the UMZU in the middle of the Hanseatic city of Bremen, 'moyo-Team‘ and the 'Korean Schule Bremen e.V.' jointly opened the 'Korean Cultural Center'.`,
+          `In our 'Korean Cultural Center', we offer a diverse program including a children's library, 'DADO' [Korean tea ceremony], craft activities [name labels], opportunities to learn about Korea and learn Korean.`,
+          `Discussions and meetings about Bremen's Korean culture and its significance are also planned.`,
+          `We invite everyone to share these special moments of Korean culture with us.`,
+          `<br>`,
+          `<b>Programs</b>`,
+          `12:00 - 2:00 p.m.: ‘Library’ [children’s book exhibition] and ‘Dado’ [Korean tea ceremony]`,
+          `2:00 p.m. - 4:00 p.m.: Craft activities [name labels]`,
+          `4:00 p.m. - 6:00 p.m.: Learn Korean`,
+          `6:00 p.m. - 8:00 p.m.: Conference and discussion`
         ]
       }
     ]
@@ -307,21 +318,39 @@ export const program = [
     DATE: '25.11',
     BODY: [
       {
-        lang: 'de',
-        title: 'Guineischer Tag. Das Motto: Heute wird nur Fullah gesprochen.',
+        lang: 'fr',
+        title: `Journée guinéenne: ’’L’histoire et la culture Fulbé” de Guinée/Conakry - Afrique de l'Ouest en Poular.`,
         day: 'Sa',
         parags: [
-          `Der Guineische Verein für Integration und Bildung in Deutschland möchte am 25.11. den Tag mit Euch verbringen. Es werden kreativen Angeboten auf Fullah geben.`,
-          `Für alle Altersstufen ist etwas dabei.`
+          `Ce jour-là, “l'histoire et la culture des Peulhs» de Guinée/Conakry seront racontées en Poular et un cours populaire ADLAM windere (lecture, écriture, grammaire, comptage, mémorisation du vocabulaire de la nature - animaux et Arbres) sera enseigné.`,
+          `On va aussi regarder des dessins animés drôles et pédagogiques et des comédies et on va s’occuper des contes aux fées et des informations historiques. La musique et la peinture font également partie du programme.`,
+          `Tous les groupes d'âge et les personnes parlant ou ne parlant pas Poular sont les bienvenus à tous les points du programme.`,
+          `Horaires: 10 h 00 à 13 h 00 + 20 h 00 à 22 h 00`,
+          `La journée est organisée par Mamadou Gayo Balde.`
+        ]
+      },
+      {
+        lang: 'de',
+        title: 'Guineischer Tag: “Die Geschichte und Kultur der Fulbhe” aus Guinea/Conakry - Westafrika in Fula.',
+        day: 'Sa',
+        parags: [
+          `An diesem Tag werden wir von der Geschichte und Kultur der Fulbhe aus Guinea/Conakry in Fula erzählen und einen Fula-Kurs zur Schrift ADLAM windere anbieten (Lesen,Schreiben, Grammatik, Zählen, Vokabeln u.a. aus der Natur zu Tieren und Bäumen).`,
+          `Wir werden auch lustige und lehrreiche Zeichentrickfilme und Komödien anschauen und uns mit Märchen und geschichtlichen Informationen beschäftigen. Auch Musik und Malen zählen zum Programm.`,
+          `Alle Altersgruppen und sowohl Menschen, die Fula sprechen, als auch Menschen ohne Fulakenntnisse sind bei allen Programmpunkten herzlich willkommen.`,
+          `Zeit: 10-13 Uhr + 20-22 Uhr`,
+          `Der Tag wird von Mamadou Gayo Balde organisiert.`
         ]
       },
       {
         lang: 'en',
-        title: 'Guinean Day. The motto: Only Fullah is spoken today.',
+        title: 'Guinean Day: “The history and culture of the Fulbhe” from Guinea/Conakry - West Africa in Fula.',
         day: 'Sa',
         parags: [
-          `The Guinean Association for Integration and Education in Germany would like to spend the day with you on the 25th of November. There will be creative activities in Fullah.`,
-          `There will be activities suited for all ages.`
+          `On this day we will talk about the history and culture culture of the Fulbhe from Guinea/Conakry in Fula and we will offer a Fula course on the script ADLAM windere (reading, writing, grammar, counting, vocabulary from nature about animals and trees).`,
+          `We will also watch funny and educational cartoons and comedies and we will look at fairy tales and historical information. Music and painting are also part of the program.`,
+          `All age groups and both people who speak Fula and those who do not are welcome to participate in all parts of the program.`,
+          `Time: 10:00-13:00 + 20:00-22:00`,
+          `The day is organised by Mamadou Gayo Balde.`,
         ]
       }
     ]
@@ -331,31 +360,40 @@ export const program = [
     BODY: [
       {
         lang: 'et',
-        title: 'Pakkumised eesti keeles',
+        title: 'Eesti keele päev',
         parags: [
-          `1. kaunistame looduse tooteid, nagu kive eesti rannast`,
-          `2. Mini eesti keele tund, vahepeal ka muusika abil`,
-          `3. Bilinguaalne võistlus, teemaks on eesti`
+          `14:00 - Laste programm:`,
+          `Kaunistame looduse tooteid (nagu kive eesti rannast). Räägime veidi loodusest, ja miks ta meile nii tähtis on.`,
+          `16:00 – mini eesti keele tund:`,
+          `Õppime koos natukene eesti keelt. Selle juures aitab meid ka muusika.`,
+          `18:00 – kahekeelne mälumäng`,
+          `Osalege kahekeelses mälumängus. Kes teab kõige rohkem eesti kohta?`
         ]
       },
       {
         lang: 'de',
-        title: 'Angebote auf estnischer Sprache',
+        title: 'Tag der estnischen Sprache',
         day: 'Di',
         parags: [
-          `1. Naturprodukte bemalen (bspw. Steine vom Strand in Estland)`,
-          `2. Mini Sprachkurs teilweise am Beispiel von Musik`,
-          `3. ein bilinguales Quiz über Estland`
+          `14:00 – Kinder Programm:`,
+          `Wir bemalen Naturprodukte (bspw. Steine vom Strand in Estland). Außerdem sprechen wir etwas über die Natur und wieso sie uns so wichtig ist.`,
+          `16:00 – Mini Estnisch Kurs`,
+          `Wir lernen gemeinsam ein bisschen Estnisch. Dabei hilft uns unter anderem die Musik.`,
+          `18:00 – bilinguales Quiz`,
+          `Nehmt am bilingualen Quiz teil. Wer weiß am meisten über Estland?`
         ]
       },
       {
         lang: 'en',
-        title: 'Offers in Estonian',
+        title: 'Estonian language Day',
         day: 'Tu',
         parags: [
-          `1. painting natural products (e.g. stones from the beach in Estonia)`,
-          `2. mini language course partly using music as an example`,
-          `3. bilingual quiz about Estonia`
+          `14:00 - Children's program:`,
+          `We paint natural products (e.g. stones from the beach in Estonia). We also talk about nature and why it is so important to us.`,
+          `16:00 - Mini Estonian language course`,
+          `We learn a little bit Estonian together. Among other things, the music will help us.`,
+          `18:00 - bilingual quiz`,
+          `Take part in the bilingual quiz. Who knows the most about Estonia?`
         ]
       }
     ]
