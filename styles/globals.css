@@ -51,8 +51,8 @@ a {
     --padding: 30px;
     --header-size-lg: 2.8em;
     --header-size-sm: 2.0em;
-    --parag-size-lg: 1.4em;
-    --parag-size-md: 1.1em;
+    --parag-size-lg: 1.5em;
+    --parag-size-md: 1.2em;
     --parag-size-sm: 0.8em;
   }
   ::-webkit-scrollbar { width: 12px; height: 12px; }

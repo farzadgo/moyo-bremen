@@ -9,7 +9,7 @@
   opacity: 1;
   font-size: var(--header-size-sm);
   width: 100%;
-  padding: 20px 0 10px;
+  padding: 20px 0;
 }
 .time > * {
   pointer-events: none;
@@ -19,14 +19,18 @@
 }
 
 .programentry > h2 {
-  padding-bottom: 20px;
-  color: var(--moyo-c2);
-  font-size: 1.2em;
+  padding-bottom: 30px;
+  /* color: var(--moyo-c2); */
+  font-size: var(--parag-size-md);
+  font-weight: 400;
 }
 
 .description {
   overflow: hidden;
-  margin-bottom: 10px;
+  border-right: 1px dashed;
+  border-left: 1px dashed;
+  padding: 0 var(--padding);
+  /* border-radius: 20px; */
 }
 .description > div {
   margin-bottom: 30px;
@@ -36,14 +40,14 @@
 }
 .description p {
   margin-bottom: 0.5em;
-  padding-left: 70px;
+  padding-left: var(--padding);
+  font-size: var(--parag-size-md);
 }
-
 
 /* --------- mobile --------- */
 @media (max-width: 699px) {
   .description p {
-    padding-left: 15px;
+    padding-left: 0;
   }
   .time img {
     height: 28px;

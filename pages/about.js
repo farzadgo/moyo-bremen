@@ -28,17 +28,7 @@ const About = () => {
 
   const toggler = () => setToggle(prev => !prev);
 
-  // const [width, setWidth] = useState(900);
-  // const [about, setAbout] = useState('');
-
-  // const handleResize = debounce(() => {
-  //   setWidth(window.innerWidth)
-  // }, 1000);
-
   const [animKey, setAnimKey] = useState(0);
-
-  // check this out again, not working with framer-motion!?
-  const [isMounted, setIsMounted] = useState(false);
 
   const multilangThanksPhrases = {
     en: 'Special thanks to our cooperation partners:',
@@ -54,7 +44,7 @@ const About = () => {
     ne: 'हाम्रो सहयोग साझेदारहरूलाई विशेष धन्यवाद:',
     es: 'Un agradecimiento especial a nuestros socios colaboradores:',
     fr: 'Nous remercions tout particulièrement nos partenaires de coopération :',
-    ff: 'Special thanks to our cooperation partners:',
+    ff: 'Nous remercions tout particulièrement nos partenaires de coopération :',
   }
 
   const createMarkup = (string) => {
@@ -72,22 +62,17 @@ const About = () => {
     }
     fetchData();
 
-    if (lang === langs.ar || lang === langs.ff) {
+    if (lang === langs.ar) {
       setDirection('rtl')
     } else {
       setDirection('ltr')
     }
 
-    setIsMounted(true);
     setThanksPhrase(multilangThanksPhrases[lang]);
 
     setAnimKey(animKey + 1);
 
-    // setWidth(window.innerWidth);
-    // window.addEventListener('resize', handleResize);
-    return () => {
-      // window.removeEventListener('resize', handleResize);
-    }
+    return () => {}
   }, [lang])
 
   return (
@@ -98,67 +83,71 @@ const About = () => {
       </AnimatePresence>
       <Buttons setToggle={toggler}/>
 
-      {isMounted && (
-        <motion.div
-          className={styles.pageBody}
-          key={animKey}
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{
-            scale: { duration: 1 },
-            opacity: { duration: 0.5, delay: 0.5 },
-            ease: 'easeInOut',
-            transformOrigin: 'top center',
-          }}
-        >
-          <section dir={direction}>
-            {title && <h1> {title} </h1>}
-            {about && about.map((e, i) => <p key={i} dangerouslySetInnerHTML={createMarkup(e)}/>)}
-          </section>
+      <motion.div
+        className={styles.pageBody}
+        key={animKey}
+        initial={{ scale: 0.8, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{
+          scale: { duration: 1 },
+          opacity: { duration: 0.5, delay: 0.5 },
+          ease: 'easeInOut',
+          transformOrigin: 'top center',
+        }}
+      >
+        <section dir={direction}>
+          {title && <h1> {title} </h1>}
+          {about && about.map((e, i) => <p key={i} dangerouslySetInnerHTML={createMarkup(e)}/>)}
+          {lang === langs.ff && <div>
+            <img
+              src="./about-in-Fula.png"
+              alt="about-in-Fula"
+              style={{ maxWidth: '100%', height: 'auto',}}
+            />
+          </div>}
+        </section>
 
-          <section>
-            <h2> Location / Standort </h2>
-            <p>
-              UMZU Pavillon, Markt am Hanseatenhof <br/>
-              Papenstraße 6, 28195 Bremen
-            </p>
-            <h3 style={{display: 'flex', height: '1.6em', alignItems: 'center'}}>
-              <Icon.Map /> &nbsp;&nbsp;
-              <a href='https://maps.app.goo.gl/QHXXEwzVygTx1RVx5'> <i>Google Maps</i> </a>
-            </h3>
-          </section>
+        <section>
+          <h2> Location / Standort </h2>
+          <p>
+            UMZU Pavillon, Markt am Hanseatenhof <br/>
+            Papenstraße 6, 28195 Bremen
+          </p>
+          <h3 style={{display: 'flex', height: '1.6em', alignItems: 'center'}}>
+            <Icon.Map /> &nbsp;&nbsp;
+            <a href='https://maps.app.goo.gl/QHXXEwzVygTx1RVx5'> <i>Google Maps</i> </a>
+          </h3>
+        </section>
 
-          <section dir={direction}>
-            <h3 style={{margin: '4em 0 2em'}}> {thanksPhrase} </h3>
+        <section dir={direction}>
+          <h3 style={{margin: '4em 0 2em'}}> {thanksPhrase} </h3>
 
-              <div className={styles.row}>
-                <div className={styles.logo}>
-                  <img src="./partner-logos/logo_ANB.png" alt="partner logo"></img>
-                </div>
-                <div className={styles.logo}>
-                  <img src="./partner-logos/logo_koreanisch.png" alt="partner logo"></img>
-                </div>
+            <div className={styles.row}>
+              <div className={styles.logo}>
+                <img src="./partner-logos/logo_ANB.png" alt="partner logo"></img>
               </div>
-
-              <div className={styles.row}>
-                <div className={styles.logo}>
-                  <img src="./partner-logos/logo_tolerance.png" alt="partner logo"></img>
-                </div>
-                <div className={styles.logo}>
-                  <img src="./partner-logos/logo_guineischer.png" alt="partner logo"></img>
-                </div>
+              <div className={styles.logo}>
+                <img src="./partner-logos/logo_koreanisch.png" alt="partner logo"></img>
               </div>
+            </div>
 
-              <div className={styles.row}>
-                <div className={styles.logo}>
-                  <img src="./partner-logos/logo_schwaKiBi.png" alt="partner logo"></img>
-                </div>
+            <div className={styles.row}>
+              <div className={styles.logo}>
+                <img src="./partner-logos/logo_tolerance.png" alt="partner logo"></img>
               </div>
+              <div className={styles.logo}>
+                <img src="./partner-logos/logo_guineischer.png" alt="partner logo"></img>
+              </div>
+            </div>
 
-          </section>
+            <div className={styles.row}>
+              <div className={styles.logo}>
+                <img src="./partner-logos/logo_schwaKiBi.png" alt="partner logo"></img>
+              </div>
+            </div>
+        </section>
 
-        </motion.div>
-      )}
+      </motion.div>
 
     </main>
   )

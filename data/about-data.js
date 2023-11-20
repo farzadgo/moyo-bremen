@@ -206,7 +206,7 @@ export const about = [
       {
         TITLE: 'moyo',
         BODY: [
-          `COMING SOON`
+          
         ]
       }
     ]

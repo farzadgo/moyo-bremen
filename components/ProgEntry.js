@@ -33,19 +33,25 @@ const ProgEntry = ({ content, lang, fgColor, activeParag, setActive }) => {
   }
   
   useEffect(() => {
-    // console.log(content);
+
     let imperial = content.BODY.filter(obj => obj.lang === lang);
     setDay(imperial[0].day);
     let extra = content.BODY.filter(obj => obj.lang !== 'de' && obj.lang !== 'en');
     setBody([...extra, ...imperial]);
-
-    // console.log(activeParag);
-    // console.log(body);
+    
+    // console.log(content, body, activeParag);
 
     if (content.DATE === activeParag) {
       setBodyHeight('auto');
       setActiveMargin('calc(var(--padding) + 48px)');
       setArrowAngle(180);
+
+      // let sibling = descRef.current.parentElement.nextSibling;
+      // if (sibling) {
+      //   sibling.firstChild.style.borderTop = `2px solid ${fgColor}`;
+      // } else {
+      //   descRef.current.style.borderBottom = `2px solid ${fgColor}`;
+      // }
 
       let tempTitle = descRef.current.previousSibling;
       if (tempTitle.id === 'temp-title') {
@@ -71,14 +77,14 @@ const ProgEntry = ({ content, lang, fgColor, activeParag, setActive }) => {
   return (
    <div id={content.DATE} className={styles.programentry} >
     
-    <div className={styles.time} onClick={handleTimeClick} style={{marginTop: activeMargin, borderTop: `1px solid ${fgColor}`}}>
+    <div className={styles.time} onClick={handleTimeClick} style={{marginTop: activeMargin, borderTop: `1px dashed ${fgColor}`}}>
       <span> {day} – {content.DATE} </span>
       <img src='/moyo-logo-72.png' style={{transform: `rotate(${arrowAngle}deg)`}} />
     </div>
 
     {body.length > 1 && <h2 id='temp-title'> {body[0].title} </h2>}
 
-    <div className={styles.description} style={{height: bodyHeight}} ref={descRef}>
+    <div className={styles.description} style={{height: bodyHeight, borderColor: `${fgColor}`}} ref={descRef}>
       {body && body.map((e, i) => (
         <div key={i} style={e.lang !== 'en' && e.lang !== 'de' ? {color: 'var(--moyo-c1'} : {}}>
           <h2> {e.title} </h2>
