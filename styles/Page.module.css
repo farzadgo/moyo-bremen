@@ -33,15 +33,6 @@
   color: var(--moyo-c1);
 }
 
-.photoContainer {
-  margin-bottom: 50px;
-}
-.photoContainer img {
-  max-width: 100%;
-  height: auto;
-}
-
-
 .row {
   display: flex;
   margin-bottom: 20px;

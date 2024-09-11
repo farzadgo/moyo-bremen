@@ -8,6 +8,7 @@ import Buttons from '@/components/Buttons';
 import Menu from '@/components/Menu';
 import ProgEntry from '@/components/ProgEntry';
 import styles from '@/styles/Home.module.css';
+import ReactPlayer from 'react-player';
 
 // import logoBgOne from '@/public/moyo-claim.png'
 // import logoBgTwo from '@/public/moyo-claim-wt.png'
@@ -17,6 +18,7 @@ export default function Home() {
   const {theme} = useTheme();
   const {lang} = useLang();
   const [progdata, setProgdata] = useState('');
+  const [isMounted, setIsMounted] = useState(false);
 
   const router = useRouter();
 
@@ -63,6 +65,7 @@ export default function Home() {
   useEffect(() => {
     let url = theme === themes.light ? '/moyo-claim.png' : '/moyo-claim-wt.png';
     setBgURL(url);
+    setIsMounted(true);
     return () => {}
   }, [theme])
   
@@ -80,6 +83,27 @@ export default function Home() {
           <p style={timespanStyle}> September - {lang === langs.de ? 'Dezember' : 'December'} 2023 </p>
           <a href="#program"> {lang === langs.de ? 'PROGRAMM' : 'PROGRAM'} <span style={arrowStyle}></span> </a>
         </div>
+      </section>
+
+      <section className={styles.homeVideo}>
+        <span> ...loading video </span>
+        {isMounted && <div className={styles.videoContainer}>
+          <ReactPlayer
+            url='https://www.youtube.com/watch?v=ItJA7fODlFU'
+            width='100%'
+            height='100%'
+            controls={true}
+            config={{
+              youtube: {
+                playerVars: {
+                  cc_lang_pref: 'de', // Default subtitle language
+                  cc_load_policy: 1, // Enable subtitles by default
+                  fs: 0, // Hide the full screen button
+                },
+              },
+            }}
+          />
+        </div>}
       </section>
 
       <section className={styles.homeProgram} id="program">
