@@ -15,6 +15,28 @@
   background-size: 35%;
 }
 
+.news {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  transform-origin: top left;
+  top: 100%;
+  left: 0;
+  padding: 30px 40px;
+  transform: rotate(-90deg);
+  /* white-space: nowrap; */
+  width: 100dvh;
+  font-size: 1.2em;
+}
+
+.news a {
+  /* box-shadow: 0 0 0 0 rgba(231, 13, 130, 0.6); */
+	transform: scale(1);
+	animation: pulse-black 2s infinite;
+  border-radius: 20px;
+  padding: 0 10px;
+}
+
 .gotoprogram {
   position: absolute;
   top: 75vh;
@@ -53,7 +75,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 100px 0 250px;
+  margin: 200px 0;
   background-color: rgba(164, 164, 164, 0.1);
   border-radius: 15px;
 }
@@ -65,7 +87,7 @@
   /* position: relative; */
   overflow: hidden;
   width: 1020px;
-  height: 580px;
+  height: 574px;
   z-index: 1;
   border-radius: 15px;
 }
@@ -85,6 +107,10 @@
   .homeLanding {
     background-size: 55%;
   }
+  .news {
+    font-size: 0.95em;
+    padding: 15px 20px;
+  }
   .gotoprogram {
     font-size: 0.95em;
     top: 70vh;
@@ -93,12 +119,12 @@
 
 @media (max-width: 1100px) {
   .homeVideo {
-    margin: 80px 0 150px;
+    margin-bottom: 140px;
     border-radius: 10px;
   }
   .videoContainer {
     width: calc(100vw - var(--padding) * 1.8);
-    height: 54vw;
+    height: 52vw;
     border-radius: 10px;
   }
 }
@@ -115,6 +141,7 @@
     -webkit-transform: rotate(-45deg) translate(0, 0);
   }
 }
+
 @keyframes fargoldownarrow {
   0% {
     transform: rotate(-45deg) translate(0, 0);
@@ -125,4 +152,19 @@
   40% {
     transform: rotate(-45deg) translate(0, 0);
   }
+}
+
+@keyframes pulse-black {
+	0% {
+		transform: scale(1);
+		box-shadow: 0 0 0 0 rgba(231, 13, 130, 0.4);
+	}
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 30px rgba(231, 13, 130, 0);
+	}
+	100% {
+		transform: scale(1);
+		box-shadow: 0 0 0 0 rgba(231, 13, 130, 0);
+	}
 }

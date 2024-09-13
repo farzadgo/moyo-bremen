@@ -9,6 +9,8 @@ import Menu from '@/components/Menu';
 import ProgEntry from '@/components/ProgEntry';
 import styles from '@/styles/Home.module.css';
 import ReactPlayer from 'react-player';
+import { contact } from '../data/sitedata';
+import { ExternalLink } from 'react-feather';
 
 // import logoBgOne from '@/public/moyo-claim.png'
 // import logoBgTwo from '@/public/moyo-claim-wt.png'
@@ -19,6 +21,7 @@ export default function Home() {
   const {lang} = useLang();
   const [progdata, setProgdata] = useState('');
   const [isMounted, setIsMounted] = useState(false);
+  const igUrl = contact.filter(e => e.name === 'Instagram')[0].url;
 
   const router = useRouter();
 
@@ -35,6 +38,11 @@ export default function Home() {
   
   const fgColor = theme === themes.light ? 'black' : 'white';
   const bgColor = theme === themes.light ? 'var(--bg-light)' : 'var(--bg-dark)';
+
+  const newsMessage = {
+    de: 'Aktuelle Infos zum Projekt findet ihr auf unserer',
+    en: 'You can find the latest information about the project on our'
+  }
 
   const mainStyle = {
     background: bgColor,
@@ -79,9 +87,13 @@ export default function Home() {
       <Buttons setToggle={toggler}/>
 
       <section className={styles.homeLanding} style={landingStyle}>
+        <div className={styles.news}> {lang === langs.de ? newsMessage.de : newsMessage.en}
+          <a href={igUrl} target='_blank' style={{color: 'var(--moyo-c1)'}}>{lang === langs.de ? 'Instagram-Seite' : 'Instagram page'}</a>
+          <ExternalLink {...{color: 'var(--moyo-c1)', size: 18, strokeWidth: 2}}/>
+        </div>
         <div className={styles.gotoprogram}>
           <p style={timespanStyle}> September - {lang === langs.de ? 'Dezember' : 'December'} 2023 </p>
-          <a href="#program"> {lang === langs.de ? 'PROGRAMM' : 'PROGRAM'} <span style={arrowStyle}></span> </a>
+          <a href="#program"> {lang === langs.de ? 'Programm der Pilotphase' : 'Program of the pilot phase'} <span style={arrowStyle}></span> </a>
         </div>
       </section>
 
